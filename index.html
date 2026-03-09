@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Image Text Translator (Spanish)</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <h1>Image Text Translator</h1>
+        <p>Capture or upload text, then translate it to Spanish.</p>
+      </div>
+      <button id="startCamera" class="btn primary">Start Camera</button>
+    </header>
+
+    <main class="layout">
+      <section class="panel camera-panel">
+        <h2>Camera</h2>
+        <div class="camera-shell">
+          <video id="camera" autoplay muted playsinline></video>
+          <div id="cameraStatus" class="badge">Camera idle</div>
+        </div>
+        <div class="row">
+          <button id="captureFrame" class="btn secondary">Capture Text</button>
+          <label class="btn ghost file-btn" for="uploadImage">Upload Image</label>
+          <input id="uploadImage" class="file-input" type="file" accept="image/*" />
+          <button id="retake" class="btn ghost">Clear</button>
+        </div>
+        <canvas id="snapshot" class="snapshot" width="1280" height="720" aria-label="Captured frame"></canvas>
+      </section>
+
+      <section class="panel result-panel">
+        <h2>OCR + Translate</h2>
+        <div class="row wrap">
+          <button id="readText" class="btn primary">Read Text (OCR)</button>
+          <button id="translateSpanish" class="btn secondary">Translate to Spanish</button>
+        </div>
+
+        <label for="ocrText">Detected text</label>
+        <textarea id="ocrText" rows="7" placeholder="OCR text appears here (you can edit it)"></textarea>
+
+        <label for="spanishText">Spanish translation</label>
+        <textarea id="spanishText" rows="7" placeholder="Spanish output appears here"></textarea>
+
+        <div class="result-card">
+          <h3>Status</h3>
+          <pre id="result">Ready.</pre>
+        </div>
+      </section>
+    </main>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
