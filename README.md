@@ -1,29 +1,28 @@
-# Image Text Translator (Spanish)
+# Het Bhavesh Shah - Stranger Things Portfolio
 
-Capture or upload an image that contains normal text, run OCR, and translate it to Spanish.
+Personal portfolio website with a Stranger Things-inspired theme, interactive villain/developer effects, and live GitHub project listing.
+
+## Live Sections
+- Hero
+- Impact Snapshot
+- About
+- Projects (auto-loaded from GitHub)
+- Contact
 
 ## Features
-- Camera capture and image upload
-- OCR extraction using `Tesseract.js`
-- Editable detected text before translation
-- Spanish translation output
+- Stranger Things visual styling and atmosphere
+- Click interaction effect across sections and project items
+- Scroll reveal animations for sections and content blocks
+- Project names auto-fetched from GitHub profile (`shahet07`)
+- Responsive layout for desktop and mobile
 
-## Run
-1. Open terminal in this project.
-2. Start local server:
-
+## Run Locally
 ```bash
-python3 -m http.server 3000
+cd "/Users/shahet07/Documents/New project"
+python3 -m http.server 8080
 ```
 
-3. Open `http://localhost:3000`
-4. Click **Start Camera** (or use **Upload Image**)
-5. Choose OCR mode:
-   - `Fast`: quicker detection, lower accuracy
-   - `Accurate`: slower, higher accuracy
-6. Click **Read Text (OCR)**
-7. Click **Translate to Spanish**
+Open: `http://localhost:8080/index.html`
 
-## Notes
-- Best results: sharp image, high contrast text, minimal background noise.
-- Translation uses an online endpoint, so internet is required in browser.
+## GitHub Source
+Repository: `https://github.com/shahet07/resume-and-portfolio-.git`
