@@ -3,56 +3,124 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Image Text Translator (Spanish)</title>
+    <title>Het Shah | Upside Down Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Creepster&family=Manrope:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
-    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
   </head>
   <body>
+    <div class="bg-noise" aria-hidden="true"></div>
+    <div class="bg-glow" aria-hidden="true"></div>
+
     <header class="topbar">
-      <div>
-        <h1>Image Text Translator</h1>
-        <p>Capture or upload text, then translate it to Spanish.</p>
-      </div>
-      <button id="startCamera" class="btn primary">Start Camera</button>
+      <a href="#home" class="brand"><span class="name-highlight">Het Shah</span></a>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#impact">Impact</a>
+        <a href="#projects">Projects</a>
+        <a href="#github">GitHub</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </header>
 
-    <main class="layout">
-      <section class="panel camera-panel">
-        <h2>Camera</h2>
-        <div class="camera-shell">
-          <video id="camera" autoplay muted playsinline></video>
-          <div id="cameraStatus" class="badge">Camera idle</div>
+    <main>
+      <section id="home" class="hero section entity" tabindex="0">
+        <h1>HET BHAVESH SHAH</h1>
+        <p class="hero-copy">
+          I design and build backend systems, distributed services, and AI-powered products that are stable in
+          production and clear in business impact.
+        </p>
+        <div class="chips">
+          <span>San Francisco, CA</span>
+          <span>MS Information Systems</span>
+          <span>Full Stack + AI Engineer</span>
         </div>
-        <div class="row">
-          <button id="captureFrame" class="btn secondary">Capture Text</button>
-          <label class="btn ghost file-btn" for="uploadImage">Upload Image</label>
-          <input id="uploadImage" class="file-input" type="file" accept="image/*" />
-          <button id="retake" class="btn ghost">Clear</button>
+        <div class="hero-actions">
+          <a class="btn" href="#projects">Explore Work</a>
+          <a class="btn ghost" href="#contact">Let&apos;s Connect</a>
         </div>
-        <canvas id="snapshot" class="snapshot" width="1280" height="720" aria-label="Captured frame"></canvas>
       </section>
 
-      <section class="panel result-panel">
-        <h2>OCR + Translate</h2>
-        <div class="row wrap">
-          <button id="readText" class="btn primary">Read Text (OCR)</button>
-          <button id="translateSpanish" class="btn secondary">Translate to Spanish</button>
+      <section id="impact" class="section alt entity" tabindex="0">
+        <h2>Impact Snapshot</h2>
+        <p class="section-lead">Execution measured in outcomes, not just deliverables.</p>
+        <div class="cards four metrics">
+          <article class="card entity" tabindex="0">
+            <p class="metric">33%</p>
+            <p>Workflow efficiency improvement in payroll backend operations.</p>
+          </article>
+          <article class="card entity" tabindex="0">
+            <p class="metric">31%</p>
+            <p>Deployment stability gain through architecture-to-rollout ownership.</p>
+          </article>
+          <article class="card entity" tabindex="0">
+            <p class="metric">38%</p>
+            <p>System reliability increase in financial processing workflows.</p>
+          </article>
+          <article class="card entity" tabindex="0">
+            <p class="metric">28%</p>
+            <p>Faster incident recovery with better observability and debugging flows.</p>
+          </article>
         </div>
+      </section>
 
-        <label for="ocrText">Detected text</label>
-        <textarea id="ocrText" rows="7" placeholder="OCR text appears here (you can edit it)"></textarea>
+      <section id="about" class="section entity" tabindex="0">
+        <h2>About</h2>
+        <div class="split">
+          <article class="card entity" tabindex="0">
+            <h3>Who I Am</h3>
+            <p>
+              I am a graduate student at Santa Clara University focused on scalable backend engineering and applied AI.
+              My work combines system design, practical implementation, and measurable product outcomes.
+            </p>
+            <p>
+              Core strengths: architecture design, reliability engineering, API and data workflows, and cross-functional
+              collaboration from requirement to production.
+            </p>
+          </article>
+          <article class="card entity" tabindex="0">
+            <h3>Journey</h3>
+            <ul class="timeline">
+              <li><span>2019</span> Started BE in Information Technology.</li>
+              <li><span>2021</span> Built production tooling as Web Developer Intern at iGlobal Software.</li>
+              <li><span>2021-2024</span> Shipped and stabilized systems at Pegasus Design House.</li>
+              <li><span>2024</span> Began MS in Information Systems at Santa Clara University.</li>
+              <li><span>2025</span> Drove backend improvements as Student Researcher at Grammarly.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
 
-        <label for="spanishText">Spanish translation</label>
-        <textarea id="spanishText" rows="7" placeholder="Spanish output appears here"></textarea>
+      <section id="projects" class="section alt entity" tabindex="0">
+        <h2>Projects</h2>
+        <p class="section-lead">
+          All projects in one place from <a href="https://github.com/shahet07" target="_blank" rel="noreferrer">github.com/shahet07</a>
+        </p>
+        <div id="githubProjectGrid" class="project-list"></div>
+      </section>
 
-        <div class="result-card">
-          <h3>Status</h3>
-          <pre id="result">Ready.</pre>
+      <section id="contact" class="section cta entity" tabindex="0">
+        <h2>Let&apos;s Build Something Real</h2>
+        <p class="section-lead">
+          Open to software engineering opportunities, backend-focused roles, and collaborative AI product development.
+        </p>
+        <div class="chips">
+          <span><a href="mailto:shahet07@gmail.com">shahet07@gmail.com</a></span>
+          <span><a href="tel:+13413457372">+1 (341) 345-7372</a></span>
+          <span><a href="https://www.linkedin.com/in/shahet07/" target="_blank" rel="noreferrer">LinkedIn</a></span>
+          <span><a href="https://github.com/shahet07" target="_blank" rel="noreferrer">GitHub</a></span>
         </div>
       </section>
     </main>
 
-    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <div id="villainOverlay" class="villain-overlay" aria-hidden="true">
+      <div class="veil"></div>
+      <p>DEVELOPER IS HERE !</p>
+    </div>
 
     <script src="app.js"></script>
   </body>
